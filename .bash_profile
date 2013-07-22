@@ -1,5 +1,17 @@
+
+# Get the system wide default PATH.  
+# It provides access to software you need.  It differs from one
+# platform to another.  The department staff maintains it as a
+# basic part of your working environment.  We will be very reluctant
+# to bail you out if you ignore this warning and munge your PATH.
+# !! DO NOT REMOVE THIS BLOCK !!
+if [ -f /lusr/lib/misc/path.sh ]; then
+	. /lusr/lib/misc/path.sh
+fi
+# !! DO NOT REMOVE THIS BLOCK !!
+
 # Ensure user-installed binaries take precedence
-export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
+export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin:${PATH}
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
