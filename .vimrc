@@ -1,6 +1,18 @@
 " Make Vim more useful
 set nocompatible
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+" Set colorscheme
+colorscheme koehler
+" Map <Esc> to jj
+:imap jj <Esc>
+" Show matching brackets.
+set showmatch
+" Enable auto indent
+set autoindent
+" Enable smart tabs
+set smarttab
+" Do smart case matching
+set smartcase
+" Use the OS clipboard by default on versions compiled with +clipboard
 set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
@@ -36,15 +48,16 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-" Highlight current line
-set cursorline
+" Expand <Tab>s with spaces; death to tabs!
+set expandtab
+" Spaces for each step of auto or regular indent
+set shiftwidth=4
+" Set virtual tab stop compat for 8-wide tabs
+set softtabstop=4
+" Round indents to multiple of shiftwidth
+set shiftround
 " Make tabs as wide as two spaces
-set tabstop=2
-" Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
-" Highlight searches
-set hlsearch
+set tabstop=4
 " Ignore case of searches
 set ignorecase
 " Highlight dynamically as pattern is typed
@@ -67,14 +80,8 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
-" Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
-
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
@@ -84,7 +91,8 @@ function! StripWhitespace()
 	call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
-" Save a file as root (,W)
+
+" Save a file as root ,W
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
@@ -93,4 +101,9 @@ if has("autocmd")
 	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+endif
+
+"Jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
