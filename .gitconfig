@@ -76,3 +76,6 @@
 
 [push]
 	default = matching
+[user]
+	email = arashghoreyshi@gmail.com
+	name = Arash Ghoreyshi
