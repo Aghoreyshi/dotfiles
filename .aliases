@@ -9,6 +9,7 @@ alias -- -="cd -"
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
+alias dc="cd ~/Documents"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
 alias g="git"
@@ -28,7 +29,7 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -l ${colorflag}"
+alias l="ls ${colorflag}"
 alias ll="ls -l ${colorflag}"
 
 # Accept typo for ls
