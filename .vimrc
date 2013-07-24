@@ -1,8 +1,8 @@
 " Make Vim more useful
 set nocompatible
 " Set colorscheme
-colorscheme koehler
-"colorscheme evening
+"colorscheme koehler
+colorscheme evening
 " Map <Esc> to jj
 :imap jj <Esc>
 " Show matching brackets.
