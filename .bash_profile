@@ -51,3 +51,4 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 source /usr/local/bin/virtualenvwrapper.sh
 
 export PGDATA=/usr/local/var/postgres
+export DJANGO_SETTINGS_MODULE=araghor.settings
