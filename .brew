@@ -57,21 +57,26 @@ function installcask() {
 	brew cask install "${@}" 2> /dev/null
 }
 
-#installcask dropbox
-#installcask google-chrome
-#installcask google-chrome-canary
+installcask dropbox
+installcask google-chrome
+installcask iterm2
+installcask sublime-text
+installcask the-unarchiver
+installcask transmission
+installcask virtualbox
+installcask vlc
+installcask macfusion
+installcask omni-disk-sweeper
+installcask plex
+installcask f-lux
+installcask cyberduck
+installcask seashore
+
 #installcask imagealpha
 #installcask imageoptim
-installcask iterm2
-#installcask macvim
 #installcask miro-video-converter
-#installcask sublime-text
-#installcask the-unarchiver
-installcask tor-browser
-#installcask transmission
+#installcask tor-browser
 #installcask ukelele
-#installcask virtualbox
-#installcask vlc
 
 # Remove outdated versions from the cellar
 brew cleanup
