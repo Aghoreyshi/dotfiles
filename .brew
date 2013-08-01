@@ -68,7 +68,7 @@ installcask vlc
 installcask macfusion
 installcask omni-disk-sweeper
 installcask plex
-installcask flux
+installcask f-lux
 installcask cyberduck
 installcask seashore
 
