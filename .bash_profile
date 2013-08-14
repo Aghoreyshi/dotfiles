@@ -1,5 +1,5 @@
 # Ensure user-installed binaries take precedence
-export PATH=/usr/local/share/python:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
+export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -49,10 +49,6 @@ export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 source /usr/local/bin/virtualenvwrapper.sh
-
-# Django
-export PGDATA=/usr/local/var/postgres
-export DJANGO_SETTINGS_MODULE=araghor.settings
 
 # Add subl command
 # ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
