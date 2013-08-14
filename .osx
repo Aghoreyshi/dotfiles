@@ -102,8 +102,9 @@ defaults write NSGlobalDomain AppleMetricUnits -bool false
 # Screen                                                                      #
 ###############################################################################
 
-# Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+# Save screenshots to a Screenshots directory
+mkdir -p "$HOME/Pictures/Screenshots"
+defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
