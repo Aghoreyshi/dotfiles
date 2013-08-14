@@ -1,0 +1,5 @@
+# Add subl shortcut
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
+
+# Save github credentials
+git config --global credential.helper osxkeychain

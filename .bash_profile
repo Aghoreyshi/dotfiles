@@ -4,7 +4,7 @@ export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra,git-completion}; do
+for file in ~/.{path,bash_prompt,exports,aliases,functions,git-completion,extra}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -50,5 +50,3 @@ export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 source /usr/local/bin/virtualenvwrapper.sh
 
-# Add subl command
-# ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
