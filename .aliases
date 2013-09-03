@@ -9,16 +9,17 @@ alias -- -="cd -"
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
+alias dc="cd ~/Documents"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
 alias v="vim"
-alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+alias m="python manage.py"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -28,7 +29,7 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -l ${colorflag}"
+alias l="ls ${colorflag}"
 alias ll="ls -l ${colorflag}"
 
 # Accept typo for ls
@@ -52,6 +53,9 @@ alias gurl='curl --compressed'
 
 # Get week number
 alias week='date +%V'
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
