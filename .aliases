@@ -30,7 +30,7 @@ fi
 
 # List all files colorized in long format
 alias l="ls ${colorflag}"
-alias ll="ls -l ${colorflag}"
+alias ll="ls -lh ${colorflag}"
 
 # Accept typo for ls
 alias sl="ls"
