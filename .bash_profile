@@ -40,6 +40,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+#pyenv configuration
+eval "$(pyenv init -)"
+
 # virtualenv should use Distribute instead of legacy setuptools
 export VIRTUALENV_DISTRIBUTE=true
 # Centralized location for new virtual environments
