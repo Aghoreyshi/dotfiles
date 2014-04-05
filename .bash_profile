@@ -40,16 +40,19 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-#pyenv configuration
-eval "$(pyenv init -)"
-
 # virtualenv should use Distribute instead of legacy setuptools
 export VIRTUALENV_DISTRIBUTE=true
 # Centralized location for new virtual environments
 export PIP_VIRTUALENV_BASE=$HOME/.virtualenvs
 # pip should only run if there is a virtualenv currently activated
-export PIP_REQUIRE_VIRTUALENV=true
+export PIP_REQUIRE_VIRTUALENV=false
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
 source /usr/local/bin/virtualenvwrapper.sh
+
+#pyenv configuration
+eval "$(pyenv init -)"
 
